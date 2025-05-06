@@ -1,6 +1,6 @@
 package br.org.catolicasc.banco;
 
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionario implements Autenticavel{
     private int senha;
     private int numFuncionarioGerenciado;
 
@@ -20,6 +20,7 @@ public class Gerente extends Funcionario {
         this.numFuncionarioGerenciado = numFuncionarioGerenciado;
     }
 
+    @Override
     public boolean autentica(int senha){
         if (this.senha == senha){
             System.out.println("Acesso permitido!");
